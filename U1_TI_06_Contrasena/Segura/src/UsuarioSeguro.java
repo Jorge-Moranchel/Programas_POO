@@ -24,6 +24,13 @@ public class UsuarioSeguro {
         boolean tieneMinuscula = false;
         boolean tieneDigito = false;
 
+        for (int i = 0; i < nuevaPassword.length(); i++) {
+            char c = nuevaPassword.charAt(i);
+            if (Character.isUpperCase(c)) tieneMayuscula = true;
+            if (Character.isLowerCase(c)) tieneMinuscula = true;
+            if (Character.isDigit(c)) tieneDigito = true;
+        }
+
 
     }
 }
