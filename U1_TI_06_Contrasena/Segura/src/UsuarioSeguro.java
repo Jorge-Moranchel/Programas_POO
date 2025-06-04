@@ -1,10 +1,8 @@
 public class UsuarioSeguro {
 
-    // Atributos privados
     private String nombreUsuario;
     private String password;
 
-    // Setter para nombre de usuario
     public void setNombreUsuario(String nombre) {
         if (nombre != null && !nombre.isEmpty()) {
             this.nombreUsuario = nombre;
@@ -13,7 +11,6 @@ public class UsuarioSeguro {
         }
     }
 
-    // Setter para la contraseña con validaciones
     public void setPassword(String nuevaPassword) {
         if (nuevaPassword == null || nuevaPassword.isEmpty()) {
             System.out.println("La contraseña no puede estar vacía.");
@@ -25,35 +22,35 @@ public class UsuarioSeguro {
             return;
         }
 
-        boolean tieneMayuscula = false;
-        boolean tieneMinuscula = false;
-        boolean tieneDigito = false;
+        boolean Mayuscula = false;
+        boolean Minuscula = false;
+        boolean Digito = false;
 
         for (int i = 0; i < nuevaPassword.length(); i++) {
             char c = nuevaPassword.charAt(i);
-            if (Character.isUpperCase(c)) tieneMayuscula = true;
-            if (Character.isLowerCase(c)) tieneMinuscula = true;
-            if (Character.isDigit(c)) tieneDigito = true;
+            if (Character.isUpperCase(c)) Mayuscula = true;
+            if (Character.isLowerCase(c)) Minuscula = true;
+            if (Character.isDigit(c)) Digito = true;
         }
 
-        if (!tieneMayuscula) {
+        if (!Mayuscula) {
             System.out.println("La contraseña debe tener al menos una letra mayúscula.");
             return;
         }
 
-        if (!tieneMinuscula) {
+        if (!Minuscula) {
             System.out.println("La contraseña debe tener al menos una letra minúscula.");
             return;
         }
 
-        if (!tieneDigito) {
+        if (!Digito) {
             System.out.println("La contraseña debe tener al menos un número.");
             return;
         }
 
         this.password = nuevaPassword;
     }
-    public boolean autenticas(String intento) {
+    public boolean autenticar(String intento) {
         return this.password != null && this.password.equals(intento);
     }
 }
