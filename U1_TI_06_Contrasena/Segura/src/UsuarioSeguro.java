@@ -30,10 +30,19 @@ public class UsuarioSeguro {
             if (Character.isLowerCase(c)) tieneMinuscula = true;
             if (Character.isDigit(c)) tieneDigito = true;
         }
-
-
-
-        
+        if (!tieneMayuscula) {
+            System.out.println("La contraseña debe tener al menos una letra mayuscula.");
+            return;
+        }
+        if (!tieneMinuscula) {
+            System.out.println("La contraseña debe tener al menos una letra minuscula.");
+            return;
+        }
+        if (!tieneDigito) {
+            System.out.println("La contraseña debe tener al menos un digito.");
+            return;
+        }
+        this.password = password;
 
     }
 }
