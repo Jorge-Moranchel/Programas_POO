@@ -46,21 +46,20 @@ public class HelloApplication extends Application {
         root.add(lblResultado, 0, 5, 2, 1);
 
         btnCrear.setOnAction(e -> {
-           String nombre = tfNombre.getText();
-           String apellido = tfApellido.getText();
-           String edad = tfEdad.getText();
-           String tipo = cbTipo.getSelectionModel().getSelectedItem();
+            String nombre = tfNombre.getText();
+            String apellido = tfApellido.getText();
+            String edad = tfEdad.getText();
+            String tipo = cbTipo.getSelectionModel().getSelectedItem();
 
-
-        if (nombre.isEmpty() || apellido.isEmpty() || edad.isEmpty() || tipo.isEmpty()) {
-            lblResultado.setText("Por favor informe todos los campos");
-            lblResultado.setStyle("-fx-background-color: #936060;");
-            root.setStyle("-fx-background-color: #babda4;");
-        }else {
-            lblResultado.setText("Nombre: " + nombre + " | Apellido: " + apellido + " | Edad: " + edad + " | Tipo: " + tipo);
-            root.setStyle("-fx-background-color: #45997b;");
-            lblResultado.setStyle("-fx-background-color: #707354;");
-        }
+            if (nombre.isEmpty() || apellido.isEmpty() || edad.isEmpty() || tipo == null) {
+                lblResultado.setText("Por favor informe todos los campos");
+                lblResultado.setStyle("-fx-background-color: #936060;");
+                root.setStyle("-fx-background-color: #6bc9e3;");
+            } else {
+                lblResultado.setText("Nombre: " + nombre + " | Apellido: " + apellido + " | Edad: " + edad + " | Tipo: " + tipo);
+                root.setStyle("-fx-background-color: #00ff00;");
+                lblResultado.setStyle("-fx-background-color: #add8e6;");
+            }
         });
 
         btnReset.setOnAction(e -> {
@@ -69,8 +68,8 @@ public class HelloApplication extends Application {
             tfEdad.clear();
             cbTipo.getSelectionModel().clearSelection();
             lblResultado.setText("");
-            root.setStyle("-fx-background-color: #56394a;");
-            lblResultado.setStyle("-fx-background-color: #958aa6;");
+            root.setStyle("");
+            lblResultado.setStyle("");
         });
         Scene scene = new Scene(root, 500, 400);
         stage.setTitle("Login");
@@ -78,10 +77,7 @@ public class HelloApplication extends Application {
         stage.getIcons().add(imagen);
         stage.setScene(scene);
         stage.show();
-
-
     }
-
     public static void main(String[] args) {
         launch();
     }
