@@ -17,14 +17,8 @@ public class Main {
         String buena = JOptionPane.showInputDialog("Ingresa una contraseña válida:");
         usuario.setPassword(buena);
 
-        String intento1 = JOptionPane.showInputDialog("Escribe tu contraseña:");
-        if (usuario.autenticar(intento1)) {
-            JOptionPane.showMessageDialog(null, "Acceso concedido.");
-        } else {
-            JOptionPane.showMessageDialog(null, "Acceso denegado.");
-        }
-        String intento2 = JOptionPane.showInputDialog("Escribe una contraseña incorrecta:");
-        if (usuario.autenticar(intento2)) {
+        String intento = JOptionPane.showInputDialog("Escribe tu contraseña:");
+        if (usuario.autenticar(intento)) {
             JOptionPane.showMessageDialog(null, "Acceso concedido.");
         } else {
             JOptionPane.showMessageDialog(null, "Acceso denegado.");
