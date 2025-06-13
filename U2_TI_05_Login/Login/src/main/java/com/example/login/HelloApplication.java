@@ -59,6 +59,10 @@ public class HelloApplication extends Application {
                 lblResultado.setText("Nombre: " + nombre + " | Apellido: " + apellido + " | Edad: " + edad + " | Tipo: " + tipo);
                 root.setStyle("-fx-background-color: #00ff00;");
                 lblResultado.setStyle("-fx-background-color: #add8e6;");
+
+                tfNombre.setStyle("-fx-control-inner-background: #9fd5ce;");
+                tfApellido.setStyle("-fx-control-inner-background: #9fd5ce;");
+                tfEdad.setStyle("-fx-control-inner-background: #9fd5ce;");
             }
         });
 
@@ -70,6 +74,9 @@ public class HelloApplication extends Application {
             lblResultado.setText("");
             root.setStyle("");
             lblResultado.setStyle("");
+            tfNombre.setStyle("");
+            tfApellido.setStyle("");
+            tfEdad.setStyle("");
         });
         Scene scene = new Scene(root, 500, 400);
         stage.setTitle("Login");
