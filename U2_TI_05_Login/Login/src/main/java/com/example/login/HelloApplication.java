@@ -53,16 +53,11 @@ public class HelloApplication extends Application {
 
             if (nombre.isEmpty() || apellido.isEmpty() || edad.isEmpty() || tipo == null) {
                 lblResultado.setText("Por favor informe todos los campos");
-                lblResultado.setStyle("-fx-background-color: #936060;");
-                root.setStyle("-fx-background-color: #6bc9e3;");
+                lblResultado.setStyle("-fx-background-color: lightblue;");
             } else {
                 lblResultado.setText("Nombre: " + nombre + " | Apellido: " + apellido + " | Edad: " + edad + " | Tipo: " + tipo);
                 root.setStyle("-fx-background-color: #00ff00;");
-                lblResultado.setStyle("-fx-background-color: #add8e6;");
 
-                tfNombre.setStyle("-fx-control-inner-background: #9fd5ce;");
-                tfApellido.setStyle("-fx-control-inner-background: #9fd5ce;");
-                tfEdad.setStyle("-fx-control-inner-background: #9fd5ce;");
             }
         });
 
