@@ -3,7 +3,7 @@ public abstract class Empleado {
     private String nombre;
     private double salarioBase;
 
-    public Empleado(String id, String nombre, double salarioBase) { // <-- Aquí está el constructor
+    public Empleado(String id, String nombre, double salarioBase) {
         this.id = id;
         this.nombre = nombre;
         this.salarioBase = salarioBase;
