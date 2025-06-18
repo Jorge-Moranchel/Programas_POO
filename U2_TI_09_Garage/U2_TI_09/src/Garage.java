@@ -24,13 +24,12 @@ public class Garage {
         return true;
     }
     public int contarVehiculos(){
-        int numeroVehiculos;
+        int numeroVehiculos = 0;
         for (int i = 0; i < espacios.length; i++) {
-            if (espacios[i] =! null) {
-                numeroVehiculos = i;
+            if (espacios[i] != null) {
+                numeroVehiculos = i++;
             }
         }
+        return numeroVehiculos;
     }
-    return contarVehiculos;
-
 }
