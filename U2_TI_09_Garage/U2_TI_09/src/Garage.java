@@ -19,15 +19,16 @@ public class Garage {
         for (int i = 0; i < espacios.length; i++) {
             if (espacios[i] != null && espacios[i].getPlaca().equals(placa)){
                 espacios[i] = null;
+                return true;
             }
         }
-        return true;
+        return false;
     }
     public int contarVehiculos(){
         int numeroVehiculos = 0;
         for (int i = 0; i < espacios.length; i++) {
             if (espacios[i] != null) {
-                numeroVehiculos = i++;
+                numeroVehiculos++;
             }
         }
         return numeroVehiculos;
