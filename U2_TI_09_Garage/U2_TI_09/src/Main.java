@@ -3,10 +3,10 @@ public class Main {
 
         Garage miGarage = new Garage(4);
 
-        Coche coche1 = new Coche("ABC2020", "Nissan", 4);
-        Motocicleta motocicleta1 = new Motocicleta("DEF1989", "Kawakasi", false);
-        Coche coche2 = new Coche("GHI789", "McLaren", 2);
-        Motocicleta motocicleta2 = new Motocicleta("XDD1617", "Honda", true);
+        Coche coche1 = new Coche("GANT1212", "Chevrolet", 4);
+        Motocicleta motocicleta1 = new Motocicleta("XDD1010", "Yamaha", true);
+        Coche coche2 = new Coche("GOUT9877", "Porche", 2);
+        Motocicleta motocicleta2 = new Motocicleta("XDD1010", "Ducati", false);
 
         miGarage.estacionar(coche1);
         miGarage.estacionar(motocicleta1);
@@ -14,8 +14,7 @@ public class Main {
         miGarage.estacionar(motocicleta2);
 
         System.out.println("Vehículos en el garage: " + miGarage.contarVehiculos());
-        miGarage.retirar("DEF1989");
-        miGarage.retirar("ABC2021");
+        miGarage.retirar("GOUT9877");
         System.out.println("Vehículos en el garage después de retirar: " + miGarage.contarVehiculos());
     }
 }
