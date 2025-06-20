@@ -24,19 +24,26 @@ public class Main {
         System.out.println("----------------------------------------------------------");
 
         Producto encontrado = inventario.buscar("B2");
-        System.out.println("Buscar B2: " + (encontrado != null ? encontrado.getNombre() : "No encontrado"));
-        System.out.println("----------------------------------------------------------");
+        if (encontrado != null) {
+            System.out.println("Encontrado: " + encontrado.getNombre());
+        }else {
+            System.out.println("Producto no encontrado");
+        }
 
         Producto noExiste = inventario.buscar("Z9");
-        System.out.println("Buscar pero no existe Z9: " + (noExiste != null ? noExiste.getNombre() : "No encontrado"));
-        System.out.println("----------------------------------------------------------");
+        if (noExiste != null) {
+            System.out.println("No existe: " + noExiste.getNombre());
+        }else {
+            System.out.println("Producto no encontrado");
+        }
 
-        System.out.println("Eliminar B2: " + inventario.eliminarProducto("B2"));
+        System.out.println("Eliminamos P2: " + inventario.eliminarProducto("B2"));
         System.out.println("Total: " + inventario.totalItems());
-        System.out.println("----------------------------------------------------------");
+        System.out.println("xdddddddddddddddddddddddddddddddddddddddd");
 
-        System.out.println("Agregar p4 de nuez: " + inventario.agregarProducto(p4));
+        System.out.println("Reintentamos agregar P4: " + inventario.agregarProducto(p4));
         System.out.println("Total: " + inventario.totalItems());
+
 
     }
 }
