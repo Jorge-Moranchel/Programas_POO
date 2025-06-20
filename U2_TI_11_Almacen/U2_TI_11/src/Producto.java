@@ -9,32 +9,30 @@ public class Producto {
         this.setNombre(nombre);
         this.setCantidad(cantidad);
     }
+
     public String getCodigo() {
         return codigo;
     }
-
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
-
     public String getNombre() {
         return nombre;
     }
-
+    public int getCantidad() {
+        return cantidad;
+    }
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public int getCantidad() {
-        return cantidad;
+    public void setCodigo(String codigo) {
+        if (codigo != null && !codigo.isEmpty()) {
+            this.codigo = codigo;
+        }
     }
-
     public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
+        if (cantidad >= 0) {
+            this.cantidad = cantidad;
+        }
     }
-
-
-
 
 }
 
